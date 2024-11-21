@@ -1,0 +1,114 @@
+-- IMPORTANTE 
+
+CREATE DATABASE registrovehicular;
+
+USE registrovehicular;
+
+
+-- Tabla de marca
+CREATE TABLE marca (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
+);
+
+-- Tabla de modelo
+CREATE TABLE modelo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    marca_id INT,
+    FOREIGN KEY (marca_id) REFERENCES marca(id)
+);
+
+-- Tabla de tipo de vehículo
+CREATE TABLE tipo_vehiculo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    modelo_id INT,
+    FOREIGN KEY (modelo_id) REFERENCES modelo(id)
+);
+
+-- Insertar datos de ejemplo (marcas)
+INSERT INTO marca (nombre) VALUES
+('Toyota'),
+('Ford'),
+('Honda'),
+('Chevrolet'),
+('Nissan'),
+('Kia'),
+('Hyundai'),
+('Mazda'),
+('Subaru'),
+('Volkswagen');
+
+-- Insertar datos de ejemplo (modelos)
+INSERT INTO modelo (nombre, marca_id) VALUES
+('Corolla', 1),
+('Camry', 1),
+('F-150', 2),
+('Mustang', 2),
+('Civic', 3),
+('Accord', 3),
+('Malibu', 4),
+('Equinox', 4),
+('Altima', 5),
+('Sentra', 5),
+('Seltos', 6),
+('Sportage', 6),
+('Elantra', 7),
+('Tucson', 7),
+('CX-5', 8),
+('Mazda3', 8),
+('Forester', 9),
+('Outback', 9),
+('Golf', 10),
+('Jetta', 10);
+
+
+-- Insertar datos de ejemplo (tipos de vehículos)
+INSERT INTO tipo_vehiculo (nombre, modelo_id) VALUES
+('Sedán', 1),
+('Sedán', 2),
+('Camioneta', 3),
+('Deportivo', 4),
+('Sedán', 5),
+('Sedán', 6),
+('SUV', 7),
+('SUV', 8),
+('Sedán', 9),
+('Sedán', 10),
+('SUV', 11),
+('SUV', 12),
+('Sedán', 13),
+('SUV', 14),
+('SUV', 15),
+('Sedán', 16),
+('SUV', 17),
+('SUV', 18),
+('Hatchback', 19),
+('Sedán', 20);
+
+
+CREATE TABLE automoviles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    vin VARCHAR(17) NOT NULL,
+    placa VARCHAR(10) NOT NULL,
+    marca VARCHAR(50) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    anio INT NOT NULL,
+    color VARCHAR(30) NOT NULL,
+    tipo_vehiculo VARCHAR(50) NOT NULL,
+    capacidad_motor INT NOT NULL,
+    num_cilindros INT NOT NULL,
+    tipo_combustible VARCHAR(20) NOT NULL,
+    peso_bruto DECIMAL(10,2) NOT NULL,
+    transmision VARCHAR(20) NOT NULL,
+    nombre_propietario VARCHAR(100) NOT NULL,
+    tipo_propietario VARCHAR(20) NOT NULL,
+    domicilio VARCHAR(200) NOT NULL,
+    num_identificacion VARCHAR(20) NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
+    aseguradora VARCHAR(50) NOT NULL,
+    poliza VARCHAR(50) NOT NULL,
+    inicio_vigencia DATE NOT NULL,
+    fin_vigencia DATE NOT NULL
+);
