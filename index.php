@@ -31,10 +31,10 @@ session_start(); // Siempre debe ir al principio del archivo
         ?>
     </div>
 
-    <div class="container text-center mt-5">
+    <div class="container text-center mt-5 ">
 
         <h1 class="mb-4">Bienvenido al Sistema de Registro Vehicular</h1>
-        <div class="d-grid gap-3" style="max-width: 400px; margin: auto;">
+        <div class="d-grid gap-3 " style="max-width: 400px; margin: auto;">
 
             <div class="mb-3">
                 <a href="pages/registrarAutomovil.php" class="btn btn-primary btn-lg w-100">Registrar un nuevo automóvil</a>
@@ -45,7 +45,7 @@ session_start(); // Siempre debe ir al principio del archivo
             </div>
 
             <div class="mb-3">
-                <a href="product_api/index.php" class="btn btn-danger btn-custom btn-lg w-100">Servicio Web</a>
+                <a href="product_api/index.php" class="btn btn-warning btn-custom btn-lg w-100">Servicio Web</a>
             </div>
 
 
@@ -53,10 +53,10 @@ session_start(); // Siempre debe ir al principio del archivo
     </div>
 
     <footer>
-        <p>&copy; Victor Rodriguez Grupo: 1LS133.</p>
+        <p> Victor Rodriguez Grupo: 1LS133.</p>
     </footer>
 
-    <!-- JavaScript-->
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 

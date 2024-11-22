@@ -17,7 +17,7 @@ require_once '../includes/Database.php'; // Archivo para conectar a la base de d
                 <label for="placa" class="form-label">Número de Placa</label>
                 <input type="text" id="placa" name="placa" class="form-control" placeholder="Ingrese la placa del vehículo" required>
             </div>
-            <button type="submit" class="btn btn-primary">Buscar</button>
+            <button type="submit" class="btn btn-success">Buscar</button>
         </form>
 
         <div id="resultado" class="mt-4">
